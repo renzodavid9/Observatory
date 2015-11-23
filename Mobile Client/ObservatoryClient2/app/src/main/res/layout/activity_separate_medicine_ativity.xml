@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#F2FFFF"
+    tools:context="com.example.renzo.observatoryclient2.SeparateMedicineAtivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Genéricos."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Lista de apartados solicitados."
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"/>
+
+    <ListView
+        android:id="@+id/list_aparts"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_margin="0dp"
+        android:background="#DEF0F8"
+        android:divider="#00A19C"
+        android:dividerHeight="2.5sp"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Detalle de apartados solicitados."
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/detailsLayout">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.2dp"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Nombre med: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_medicine_name"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Precio med: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_medicine_price" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Nombre droguería: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_drugstore_name" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Dir droguería: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_drugstore_direction" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Estado solicitud: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_status" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Código solicitud: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/apart_code" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Borrar apartado"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00A19C"
+        android:id="@+id/aparts_btn"
+        android:clickable="true"/>
+
+</LinearLayout>

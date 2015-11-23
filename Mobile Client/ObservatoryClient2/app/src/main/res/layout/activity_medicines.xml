@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#F2FFFF"
+    tools:context="com.example.renzo.observatoryclient2.MedicinesActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Droguería"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="#FFFFFF"/>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/mapLayout2">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.2dp"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Nombre: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/drug_name_medicines"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Direccion: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/drug_direction_medicines"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="330dp"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/medicineLayout">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="#00A19C"
+            android:editable="false"
+            android:text="Medicamentos"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"/>
+
+
+        <ListView
+            android:id="@+id/list_medicines"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="0dp"
+            android:background="#DEF0F8"
+            android:divider="#00A19C"
+            android:dividerHeight="2.5sp"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Detalles"
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="16sp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/detailsLayout">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.2dp"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Nombre: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/medicine_name"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Componente activo: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/medicine_activeComponent" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Precio: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/medicine_price" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Presentación: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/medicine_presentation" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnsLayout">
+
+        <Button
+            android:layout_width="0.0dip"
+            android:layout_marginLeft="2dp"
+            android:layout_height="fill_parent"
+            android:text="Apartar medicamento"
+            android:textColor="#FFFFFF"
+            android:background="#00A19C"
+            android:layout_weight="2.0"
+            android:textSize="15sp"
+            android:id="@+id/apartBtn"
+            />
+        <Button
+
+            android:layout_width="0.0dip"
+            android:layout_marginRight="2dp"
+            android:layout_height="fill_parent"
+            android:text="Genérico"
+            android:textColor="#FFFFFF"
+            android:background="#00A19C"
+            android:layout_weight="2.0"
+            android:textSize="15sp"
+            android:id="@+id/genericBtn"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

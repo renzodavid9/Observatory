@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#F2FFFF"
+    android:id="@+id/mapLayout">
+<!--
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#00A19C"/>-->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="45dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Resultados"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="#FFFFFF"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:context=".MapsActivity" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="7dp"
+        android:background="#00A19C"
+        android:layout_margin="0dp"
+        android:id="@+id/img1"/>
+
+    <ListView
+        android:id="@+id/home_list_time"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_margin="0dp"
+        android:background="#DEF0F8"
+        android:divider="#00A19C"
+        android:dividerHeight="2.5sp"
+        android:choiceMode="singleChoice"
+        android:clickable="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"/>
+<!--
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="7dp"
+        android:background="#00A19C"
+        android:layout_margin="0dp"
+        android:id="@+id/img2"/>-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/mapLayout2">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="#00A19C"
+            android:editable="false"
+            android:text="Drogueria"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.2dp"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Nombre: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/drug_name"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Direccion: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/drug_direction"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Medicamentos encontrados: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/drug_numMedicines"/>
+        <Button
+            android:layout_marginTop="13dp"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Mostrar medicamentos"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="#00A19C"
+            android:id="@+id/showMedicines_btn"
+            android:textSize="15sp"
+            android:clickable="false"/>
+    </LinearLayout>
+
+</LinearLayout>

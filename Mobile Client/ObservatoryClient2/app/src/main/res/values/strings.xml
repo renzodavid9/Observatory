@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ObservatoryClient2</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_search_medicine">SearchMedicineActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_medicine_search">MedicineSearchActivity</string>
+    <string name="title_activity_medicines">MedicinesActivity</string>
+    <string name="search_description">A continuación podrá ingresar el nombre comercial del medicamento que está buscando.
+                                      La búsqueda arrojará las droguerías que se encuentren cerca a usted (5km max) con medicamentos que tengan
+                                      el nombre buscado.</string>
+    <string name="title_activity_separate_medicine_ativity">SeparateMedicineAtivity</string>
+    <string name="title_activity_manufacturers">ManufacturersActivity</string>
+    <string name="title_activity_generic">GenericActivity</string>
+</resources>

@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#F2FFFF"
+    tools:context="com.example.renzo.observatoryclient2.MedicineSearchActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Observatorio."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Búsqueda por nombre comercial."
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:text="@string/search_description"
+        android:textColor="@color/common_signin_btn_light_text_default"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:id="@+id/search_field"
+        android:hint="Ingrese nombre de medicamento"
+        android:cursorVisible="false"
+        />
+
+    <SeekBar
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:progressDrawable="@color/common_signin_btn_light_text_default"
+        android:max="5"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:id="@+id/km_ratio"
+        android:hint="0 KM"
+        />
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Buscar"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00dad5"
+        android:id="@+id/search_btn"
+        android:clickable="true"/>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Consultar apartados"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#00dad5"
+        android:id="@+id/aparts_btn"
+        android:clickable="true"/>
+
+</LinearLayout>

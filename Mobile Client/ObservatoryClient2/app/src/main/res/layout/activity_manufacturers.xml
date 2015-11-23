@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="#F2FFFF"
+    tools:context="com.example.renzo.observatoryclient2.ManufacturersActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Recomendación."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginLeft="2.2dp"
+        android:layout_height="25dp"
+        android:textColor="#00A19C"
+        android:text="Componente activo: "
+        android:editable="false"
+        android:textSize="14sp"
+        android:id="@+id/manufacturer_active_component"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:layout_height="30dp"
+        android:background="#00A19C"
+        android:editable="false"
+        android:text="Fabricantes de genéricos encontrados."
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/manufacturersLayout">
+
+        <ListView
+            android:id="@+id/manufacturers_list"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:layout_margin="0dp"
+            android:background="#DEF0F8"
+            android:divider="#00A19C"
+            android:dividerHeight="2.5sp"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerVertical"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:background="#F2FFFF"
+        android:id="@+id/mapLayout2">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="30dp"
+            android:background="#00A19C"
+            android:editable="false"
+            android:text="Detalles."
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="2.2dp"
+            android:layout_height="wrap_content"
+            android:textColor="#00A19C"
+            android:text="Laboratorio: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/manufacturer_name"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:textColor="#00A19C"
+            android:text="Medicamentos encontrados: "
+            android:editable="false"
+            android:textSize="14sp"
+            android:id="@+id/manufacturer_numMedicines"/>
+        <Button
+            android:layout_marginTop="13dp"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Mostrar medicamentos"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="#00A19C"
+            android:id="@+id/showMedicines_btn"
+            android:textSize="15sp"
+            android:clickable="false"/>
+    </LinearLayout>
+
+
+</LinearLayout>
