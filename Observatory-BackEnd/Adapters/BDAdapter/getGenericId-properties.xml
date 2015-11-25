@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="ACTIVE_COMPONENT:db_table_type">TABLE</entry>
+   <entry key="ACTIVE_COMPONENT.IDENTIFIER:db_column_type">NUMBER</entry>
+   <entry key="ACTIVE_COMPONENT.ID:db_column_precision">0</entry>
+   <entry key="ACTIVE_COMPONENT:db_column_2">IDENTIFIER</entry>
+   <entry key="ACTIVE_COMPONENT.IDENTIFIER:db_column_not_null">false</entry>
+   <entry key="ACTIVE_COMPONENT.NAME:db_column_not_null">false</entry>
+   <entry key="ACTIVE_COMPONENT:db_column_1">NAME</entry>
+   <entry key="ACTIVE_COMPONENT:db_column_0">ID</entry>
+   <entry key="ACTIVE_COMPONENT.ID:db_column_type">NUMBER</entry>
+   <entry key="ACTIVE_COMPONENT.IDENTIFIER:db_column_precision">0</entry>
+   <entry key="ACTIVE_COMPONENT.NAME:db_column_type">VARCHAR2</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="ACTIVE_COMPONENT.ID:db_column_not_null">true</entry>
+   <entry key="root_descriptor_alias">ACTIVE_COMPONENT</entry>
+   <entry key="ACTIVE_COMPONENT.NAME:db_column_size">200</entry>
+</properties>

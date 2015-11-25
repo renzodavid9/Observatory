@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/getGenerics" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/getGenerics" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="getGenericsInput" type="getGenericsInput"/>
+   <xs:complexType name="getGenericsInput">
+      <xs:sequence>
+         <xs:element name="atcp" type="xs:decimal" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="getGenericsOutputCollection" type="getGenericsOutputCollection"/>
+   <xs:complexType name="getGenericsOutputCollection">
+      <xs:sequence>
+         <xs:element name="getGenericsOutput" type="getGenericsOutput" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="getGenericsOutput">
+      <xs:sequence>
+         <xs:element name="manufacturer" type="xs:string" nillable="true"/>
+         <xs:element name="medicine" type="xs:string" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

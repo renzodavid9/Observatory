@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:xmlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:xml-content><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="OWNER.PASSWORD:db_column_not_null">true</entry>
+   <entry key="OWNER:db_column_1">DRUGSTORE_ID</entry>
+   <entry key="OWNER:db_column_0">ID</entry>
+   <entry key="OWNER.MAIL:db_column_not_null">false</entry>
+   <entry key="OWNER.LOGGED:db_column_precision">0</entry>
+   <entry key="OWNER.NAME:db_column_not_null">false</entry>
+   <entry key="OWNER.ID:db_column_not_null">true</entry>
+   <entry key="OWNER.DRUGSTORE_ID:db_column_type">NUMBER</entry>
+   <entry key="OWNER.LOGGED:db_column_type">NUMBER</entry>
+   <entry key="OWNER.NAME:db_column_type">VARCHAR2</entry>
+   <entry key="OWNER.PASSWORD:db_column_size">250</entry>
+   <entry key="OWNER.MAIL:db_column_type">VARCHAR2</entry>
+   <entry key="OWNER.ID:db_column_type">VARCHAR2</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="OWNER.DRUGSTORE_ID:db_column_not_null">false</entry>
+   <entry key="OWNER:db_table_type">TABLE</entry>
+   <entry key="root_descriptor_alias">OWNER</entry>
+   <entry key="OWNER.LOGGED:db_column_not_null">true</entry>
+   <entry key="OWNER.NAME:db_column_size">100</entry>
+   <entry key="OWNER.MAIL:db_column_size">100</entry>
+   <entry key="OWNER.DRUGSTORE_ID:db_column_precision">0</entry>
+   <entry key="OWNER.ID:db_column_size">50</entry>
+   <entry key="OWNER:db_column_5">LOGGED</entry>
+   <entry key="OWNER:db_column_4">PASSWORD</entry>
+   <entry key="OWNER:db_column_3">MAIL</entry>
+   <entry key="OWNER.PASSWORD:db_column_type">VARCHAR2</entry>
+   <entry key="OWNER:db_column_2">NAME</entry>
+</properties>]]></con:xml-content>
+</con:xmlEntry>

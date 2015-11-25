@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="FindMedicine">
+        <topicDocumentations>
+            <topicDocumentation name="FindMedicine">
+                <descriptions>
+                    <description locale="en">FindMedicine</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14422295200235">
+                <labels>
+                    <label locale="en">findNearestDrugstores_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14480252027981">
+                <labels>
+                    <label locale="en">findMedicineInDrugstore_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14484921571529">
+                <labels>
+                    <label locale="en">ERROR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14485007455751">
+                <labels>
+                    <label locale="en">OK_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14485013833657">
+                <labels>
+                    <label locale="en">ERROR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14395401084411">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14395401084449">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14422654194730">
+                <labels>
+                    <label locale="en">Are drugstores?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14484984330769">
+                <labels>
+                    <label locale="en">Are medicines?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf35"/>
+            <topicDocumentation name="sf29"/>
+            <topicDocumentation name="sf36">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf63">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf65"/>
+            <topicDocumentation name="sf52"/>
+            <topicDocumentation name="sf53">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf54"/>
+            <topicDocumentation name="sf56">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf58"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

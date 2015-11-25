@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+    
+     targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/GetSeparateStatus"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/GetSeparateStatus"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://soabpm-vm.site:7001/soa-infra/services/default/Project1!2.91/GetSeparateStatus.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="GetSeparateStatusPortTypePartnerLinkType">
+        <plnk:role name="GetSeparateStatusPortTypeProvider">
+            <plnk:portType name="tns:GetSeparateStatusPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/GetSeparateStatus">
+            <xsd:element name="start">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="key" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="startResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="status" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="start">
+        <wsdl:part name="parameters" element="tns:start"/>
+    </wsdl:message>
+    <wsdl:message name="startResponse">
+        <wsdl:part name="parameters" element="tns:startResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="GetSeparateStatusPortType">
+        <wsdl:operation name="start">
+            <wsdl:input message="tns:start"/>
+            <wsdl:output message="tns:startResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="GetSeparateStatusBinding" type="tns:GetSeparateStatusPortType">
+        <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="start">
+            <wsdlsoap:operation style="document" soapAction="start"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="GetSeparateStatus.service">
+        <wsdl:port name="GetSeparateStatusPort" binding="tns:GetSeparateStatusBinding">
+            <wsdlsoap:address location="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/GetSeparateStatus.service"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>]]></con:wsdl>
+    <con:targetNamespace>http://xmlns.oracle.com/bpmn/bpmnProcess/GetSeparateStatus</con:targetNamespace>
+</con:wsdlEntry>

@@ -1,0 +1,14 @@
+<adapter-config name="selectSeparateRegistry" adapter="Database Adapter" wsdlLocation="selectSeparateRegistry.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="selectSeparateRegistry_ptt" operation="selectSeparateRegistrySelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="selectSeparateRegistry.MedicineSeparateStatus"/>
+      <property name="QueryName" value="selectSeparateRegistrySelect"/>
+      <property name="MappingsMetaDataURL" value="selectSeparateRegistry-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

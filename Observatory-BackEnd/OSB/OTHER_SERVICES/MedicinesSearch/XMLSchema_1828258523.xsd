@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore"
+     elementFormDefault="qualified" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore"
+     xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/SetOfMedicines.xsd"/>
+    <xs:complexType name="SetOfMedicinesDrugstoreType">
+        <xs:sequence>
+            <xs:element name="setofmedicines" nillable="true" type="ns1:SetOfMedicinesType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SetOfMedicinesDrugstore" type="SetOfMedicinesDrugstoreType"/>
+</xs:schema>]]></con:schema>
+    <con:dependencies>
+        <con:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/SetOfMedicines.xsd" ref="OTHER_SERVICES/MedicinesSearch/XMLSchema_2123477746"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore</con:targetNamespace>
+</con:schemaEntry>

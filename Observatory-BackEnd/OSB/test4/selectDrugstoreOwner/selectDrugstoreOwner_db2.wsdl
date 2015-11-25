@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner" name="selectDrugstoreOwner-concrete" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner" location="selectDrugstoreOwner.wsdl"/>
+  <binding name="selectDrugstoreOwner_ptt-binding" type="tns:selectDrugstoreOwner_ptt">
+    <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+    <operation name="selectDrugstoreOwnerSelect">
+      <soap:operation soapAction="selectDrugstoreOwnerSelect"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="selectDrugstoreOwner-service">
+    <port name="selectDrugstoreOwner-port" binding="tns:selectDrugstoreOwner_ptt-binding">
+      <soap:address location="jca://myConnPoolForDB"/>
+    </port>
+  </service>
+</definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:import location="selectDrugstoreOwner.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner">
+            <con:wsdl ref="test4/selectDrugstoreOwner/selectDrugstoreOwner"/>
+        </con:import>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner</con:targetNamespace>
+</con:wsdlEntry>

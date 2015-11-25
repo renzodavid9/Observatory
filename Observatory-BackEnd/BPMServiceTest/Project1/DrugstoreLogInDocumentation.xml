@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="DrugstoreLogIn">
+        <topicDocumentations>
+            <topicDocumentation name="DrugstoreLogIn">
+                <labels>
+                    <label locale="en">DrugstoreLogIn</label>
+                </labels>
+                <descriptions>
+                    <description locale="en">DrugstoreLogIn</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14621702227695">
+                <labels>
+                    <label locale="en">selectDrugstoreOwner_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1462174100830">
+                <labels>
+                    <label locale="en">ERROR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14621754606143">
+                <labels>
+                    <label locale="en">OK_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1462184381473">
+                <labels>
+                    <label locale="en">updateOwnerActivity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14621515189071">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14621515189065">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14621720023528">
+                <labels>
+                    <label locale="en">is correct?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf140"/>
+            <topicDocumentation name="sf142"/>
+            <topicDocumentation name="sf143">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf145"/>
+            <topicDocumentation name="sf147"/>
+            <topicDocumentation name="sf148"/>
+            <topicDocumentation name="sf156"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

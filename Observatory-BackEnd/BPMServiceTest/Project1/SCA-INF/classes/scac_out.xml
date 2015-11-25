@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='db_serv']</loc>
+      <line>213</line>
+      <col>60</col>
+      <file>/oracle/jdev_user_home/mywork/BPMServiceTest/Project1/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/BPMServiceTest/Project1/composite.xml</name>
+      <fix/>
+      <msg>Reference db_serv does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:reference[@name='ds1_db_service']</loc>
+      <line>224</line>
+      <col>74</col>
+      <file>/oracle/jdev_user_home/mywork/BPMServiceTest/Project1/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/BPMServiceTest/Project1/composite.xml</name>
+      <fix/>
+      <msg>Reference ds1_db_service does not exist as wire target</msg>
+   </Fault>
+</Faults>

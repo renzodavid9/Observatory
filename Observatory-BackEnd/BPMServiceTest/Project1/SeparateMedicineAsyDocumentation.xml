@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="SeparateMedicineAsy">
+        <topicDocumentations>
+            <topicDocumentation name="SeparateMedicineAsy">
+                <descriptions>
+                    <description locale="en">SeparateMedicineAsy</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14576949096786">
+                <labels>
+                    <label locale="en">selectSeparateRegistry_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14576958067055">
+                <labels>
+                    <label locale="en">updateSeparateRegistry_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14577071724356">
+                <labels>
+                    <label locale="en">get key id</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14577064752871">
+                <labels>
+                    <label locale="en">ERROR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14577452305113">
+                <labels>
+                    <label locale="en">reserverMedicine_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14610346736765">
+                <labels>
+                    <label locale="en">NoResponse_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14574823666967">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14574823666972">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14610339154950">
+                <labels>
+                    <label locale="en">NoResponse</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW1457705073638">
+                <labels>
+                    <label locale="en">Is a registry with the key?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf73"/>
+            <topicDocumentation name="sf88"/>
+            <topicDocumentation name="sf89"/>
+            <topicDocumentation name="sf71">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf75">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf78"/>
+            <topicDocumentation name="sf77"/>
+            <topicDocumentation name="sf132"/>
+            <topicDocumentation name="sf90"/>
+            <topicDocumentation name="sf92"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

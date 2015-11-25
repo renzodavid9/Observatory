@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='Drugstore1']</loc>
+      <line>58</line>
+      <col>66</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference Drugstore1 does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='service2']</loc>
+      <line>47</line>
+      <col>62</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference service2 does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='MyDBAdapterService']</loc>
+      <line>36</line>
+      <col>56</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference MyDBAdapterService does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='selectSeparateRegistry']</loc>
+      <line>105</line>
+      <col>60</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference selectSeparateRegistry does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='updateSeparateRegistry']</loc>
+      <line>93</line>
+      <col>60</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference updateSeparateRegistry does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='insertSeparateRegistry']</loc>
+      <line>81</line>
+      <col>60</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference insertSeparateRegistry does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='getOwnerSession']</loc>
+      <line>69</line>
+      <col>76</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference getOwnerSession does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='updateOwnerSession']</loc>
+      <line>129</line>
+      <col>56</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference updateOwnerSession does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='selectDrugstoreOwner']</loc>
+      <line>117</line>
+      <col>58</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference selectDrugstoreOwner does not exist as wire target</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>/ns:composite/ns:reference[@name='Drugstore3']</loc>
+      <line>141</line>
+      <col>111</col>
+      <file>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</file>
+      <name>/oracle/jdev_user_home/mywork/Adapters/BDAdapter/composite.xml</name>
+      <fix/>
+      <msg>Reference Drugstore3 does not exist as wire target</msg>
+   </Fault>
+</Faults>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-fragment>
+  <ser:coreEntry isProxy="true" isEnabled="true" isAutoPublish="false" xmlns:ser="http://www.bea.com/wli/sb/services">
+    <ser:description/>
+    <ser:binding type="SOAP" isSoap12="false" xsi:type="con:SoapBindingType" xmlns:con="http://www.bea.com/wli/sb/services/bindings/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:wsdl ref="test4/FindMedicine"/>
+      <con:binding>
+        <con:name>FindMedicinePortTypeSOAP11Binding</con:name>
+        <con:namespace>http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine</con:namespace>
+      </con:binding>
+      <con:selector type="SOAP body"/>
+    </ser:binding>
+    <ser:monitoring isEnabled="false">
+      <ser:aggregationInterval>10</ser:aggregationInterval>
+      <ser:pipelineMonitoringLevel>Pipeline</ser:pipelineMonitoringLevel>
+    </ser:monitoring>
+    <ser:reporting>true</ser:reporting>
+    <ser:logging isEnabled="true">
+      <ser:logLevel>debug</ser:logLevel>
+    </ser:logging>
+    <ser:sla-alerting isEnabled="true">
+      <ser:alertLevel>normal</ser:alertLevel>
+    </ser:sla-alerting>
+    <ser:pipeline-alerting isEnabled="true">
+      <ser:alertLevel>normal</ser:alertLevel>
+    </ser:pipeline-alerting>
+    <ser:ws-policy>
+      <ser:binding-mode>wsdl-policy-attachments</ser:binding-mode>
+    </ser:ws-policy>
+  </ser:coreEntry>
+  <ser:endpointConfig xmlns:ser="http://www.bea.com/wli/sb/services">
+    <tran:provider-id xmlns:tran="http://www.bea.com/wli/sb/transports">http</tran:provider-id>
+    <tran:inbound xmlns:tran="http://www.bea.com/wli/sb/transports">true</tran:inbound>
+    <tran:URI xmlns:tran="http://www.bea.com/wli/sb/transports">
+      <env:value xmlns:env="http://www.bea.com/wli/config/env">/test4/PROXY_1</env:value>
+    </tran:URI>
+    <tran:inbound-properties xmlns:tran="http://www.bea.com/wli/sb/transports"/>
+    <tran:all-headers xmlns:tran="http://www.bea.com/wli/sb/transports">false</tran:all-headers>
+    <tran:provider-specific xsi:type="http:HttpEndPointConfiguration" xmlns:http="http://www.bea.com/wli/sb/transports/http" xmlns:tran="http://www.bea.com/wli/sb/transports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <http:inbound-properties/>
+    </tran:provider-specific>
+  </ser:endpointConfig>
+  <ser:router xmlns:ser="http://www.bea.com/wli/sb/services">
+    <con:flow xmlns:con="http://www.bea.com/wli/sb/pipeline/config">
+      <con:route-node name="RouteNode1">
+        <con:context>
+          <con1:varNsDecl prefix="fin" namespace="http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine" xmlns:con1="http://www.bea.com/wli/sb/stages/config"/>
+          <con1:varNsDecl prefix="drug" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore" xmlns:con1="http://www.bea.com/wli/sb/stages/config"/>
+          <con1:varNsDecl prefix="set" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" xmlns:con1="http://www.bea.com/wli/sb/stages/config"/>
+        </con:context>
+        <con:actions>
+          <con1:route xmlns:con1="http://www.bea.com/wli/sb/stages/routing/config">
+            <con2:id xmlns:con2="http://www.bea.com/wli/sb/stages/config">_ActionId-2212839626266696584-7228ed30.1508db9e110.-7a94</con2:id>
+            <con1:service ref="OSB_DB_ADAPTERS/getAllDrugstores_Service_db2" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con1:operation>getAllDrugstores_ServiceSelect</con1:operation>
+            <con1:outboundTransform>
+              <con2:replace varName="body" contents-only="false" xmlns:con2="http://www.bea.com/wli/sb/stages/transform/config">
+                <con3:id xmlns:con3="http://www.bea.com/wli/sb/stages/config">_ActionId-2212839626266696584-7228ed30.1508db9e110.-7a93</con3:id>
+                <con2:location>
+                  <con:xpathText xmlns:con="http://www.bea.com/wli/sb/stages/config">./*</con:xpathText>
+                </con2:location>
+                <con2:expr>
+                  <con:xqueryText xmlns:con="http://www.bea.com/wli/sb/stages/config">&lt;get:getAllDrugstores_ServiceSelectInputParameters  	xmlns:get="http://xmlns.oracle.com/pcbpel/adapter/db/top/getAllDrugstores_Service"/></con:xqueryText>
+                </con2:expr>
+              </con2:replace>
+            </con1:outboundTransform>
+            <con1:responseTransform>
+              <con2:replace varName="body" contents-only="false" xmlns:con2="http://www.bea.com/wli/sb/stages/transform/config">
+                <con3:id xmlns:con3="http://www.bea.com/wli/sb/stages/config">_ActionId-2212839626266696584-7228ed30.1508db9e110.-7a6d</con3:id>
+                <con2:location>
+                  <con:xpathText xmlns:con="http://www.bea.com/wli/sb/stages/config">./*</con:xpathText>
+                </con2:location>
+                <con2:expr>
+                  <con:xsltTransform xmlns:con="http://www.bea.com/wli/sb/stages/config">
+                    <con:resource ref="OSB_DB_ADAPTERS/temp/Map_test1"/>
+                    <con:input>$body/*</con:input>
+                  </con:xsltTransform>
+                </con2:expr>
+              </con2:replace>
+            </con1:responseTransform>
+          </con1:route>
+        </con:actions>
+      </con:route-node>
+    </con:flow>
+  </ser:router>
+</xml-fragment>

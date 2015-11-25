@@ -1,0 +1,14 @@
+<adapter-config name="Drugstore1" adapter="Database Adapter" wsdlLocation="Drugstore1.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="Drugstore1_ptt" operation="Drugstore1Select">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="Drugstore1.Product"/>
+      <property name="QueryName" value="Drugstore1Select"/>
+      <property name="MappingsMetaDataURL" value="Drugstore1-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

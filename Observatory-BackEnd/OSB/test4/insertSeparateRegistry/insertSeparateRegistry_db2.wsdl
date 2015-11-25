@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry" name="insertSeparateRegistry-concrete" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry" location="insertSeparateRegistry.wsdl"/>
+  <binding name="insertSeparateRegistry_ptt-binding" type="tns:insertSeparateRegistry_ptt">
+    <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+    <operation name="insert">
+      <soap:operation soapAction="insert"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+    </operation>
+  </binding>
+  <service name="insertSeparateRegistry-service">
+    <port name="insertSeparateRegistry-port" binding="tns:insertSeparateRegistry_ptt-binding">
+      <soap:address location="jca://myConnPoolForDB"/>
+    </port>
+  </service>
+</definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:import location="insertSeparateRegistry.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry">
+            <con:wsdl ref="test4/insertSeparateRegistry/insertSeparateRegistry"/>
+        </con:import>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry</con:targetNamespace>
+</con:wsdlEntry>

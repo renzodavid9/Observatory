@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="updateSeparateRegistry" adapter="Database Adapter" wsdlLocation="updateSeparateRegistry.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="updateSeparateRegistry_ptt" operation="update">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="updateSeparateRegistry.MedicineSeparateStatus"/>
+      <property name="DmlType" value="update"/>
+      <property name="MappingsMetaDataURL" value="updateSeparateRegistry-or-mappings.xml"/>
+      <property name="DetectOmissions" value="true"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="updateSeparateRegistry.wsdl" ref="test4/updateSeparateRegistry/updateSeparateRegistry"/>
+        <con:toplinkRef toplinkFile="updateSeparateRegistry-or-mappings.xml" ref="test4/updateSeparateRegistry/updateSeparateRegistry-or-mappings"/>
+    </con:jcaDependency>
+</con:jcaEntry>

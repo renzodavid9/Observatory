@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:xmlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:xml-content><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="root_descriptor_alias">MEDICINEDRUG</entry>
+   <entry key="MEDICINEDRUG:db_column_12">COMMERCIALPRICE</entry>
+   <entry key="MEDICINEDRUG:db_column_11">DRUGSTOREID</entry>
+   <entry key="MEDICINEDRUG:db_column_10">MANUFACTURER</entry>
+   <entry key="MEDICINEDRUG:db_column_9">PHARMFORM</entry>
+   <entry key="MEDICINEDRUG.PHARMFORM:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG:db_column_8">ACTIVEPRINC</entry>
+   <entry key="MEDICINEDRUG:db_column_7">ADMINISTRATION</entry>
+   <entry key="MEDICINEDRUG.ADMINISTRATION:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG:db_column_6">ATCDESC</entry>
+   <entry key="MEDICINEDRUG:db_column_5">ATC</entry>
+   <entry key="MEDICINEDRUG:db_column_4">UNIT</entry>
+   <entry key="MEDICINEDRUG:db_column_3">RECORD</entry>
+   <entry key="MEDICINEDRUG:db_column_2">INVIMACOD</entry>
+   <entry key="MEDICINEDRUG.MANUFACTURER:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.PHARMFORM:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG:db_column_1">NAME</entry>
+   <entry key="MEDICINEDRUG:db_column_0">ID</entry>
+   <entry key="MEDICINEDRUG.DRUGSTOREID:db_column_precision">0</entry>
+   <entry key="MEDICINEDRUG.UNIT:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.NAME:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG:db_table_type">TABLE</entry>
+   <entry key="MEDICINEDRUG.RECORD:db_column_precision">0</entry>
+   <entry key="MEDICINEDRUG.COMMERCIALPRICE:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.ATC:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.PHARMFORM:db_column_size">100</entry>
+   <entry key="MEDICINEDRUG.ADMINISTRATION:db_column_size">20</entry>
+   <entry key="MEDICINEDRUG.ATCDESC:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.ACTIVEPRINC:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.UNIT:db_column_size">20</entry>
+   <entry key="MEDICINEDRUG.NAME:db_column_size">250</entry>
+   <entry key="MEDICINEDRUG.MANUFACTURER:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.ATC:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.RECORD:db_column_type">NUMBER</entry>
+   <entry key="MEDICINEDRUG.RECORD:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.INVIMACOD:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.ATCDESC:db_column_size">20</entry>
+   <entry key="MEDICINEDRUG.ID:db_column_not_null">true</entry>
+   <entry key="MEDICINEDRUG.COMMERCIALPRICE:db_column_precision">0</entry>
+   <entry key="MEDICINEDRUG.MANUFACTURER:db_column_size">100</entry>
+   <entry key="MEDICINEDRUG.DRUGSTOREID:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.ATC:db_column_size">20</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="MEDICINEDRUG.DRUGSTOREID:db_column_type">NUMBER</entry>
+   <entry key="MEDICINEDRUG.ID:db_column_type">NUMBER</entry>
+   <entry key="MEDICINEDRUG.INVIMACOD:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.ACTIVEPRINC:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINEDRUG.ATCDESC:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.ID:db_column_precision">0</entry>
+   <entry key="MEDICINEDRUG.COMMERCIALPRICE:db_column_type">NUMBER</entry>
+   <entry key="MEDICINEDRUG.NAME:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.ADMINISTRATION:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.UNIT:db_column_not_null">false</entry>
+   <entry key="MEDICINEDRUG.INVIMACOD:db_column_size">250</entry>
+   <entry key="MEDICINEDRUG.ACTIVEPRINC:db_column_size">100</entry>
+</properties>]]></con:xml-content>
+</con:xmlEntry>

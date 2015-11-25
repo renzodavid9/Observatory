@@ -1,0 +1,25 @@
+<?binding.jca ds1_db_service_db.jca?>
+<wsdl:definitions name="ds1_db_service" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/ds1_db_service" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/ds1_db_service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/ds1_db_service">
+    <plt:partnerLinkType name="ds1_db_service_plt">
+        <plt:role name="ds1_db_service_role">
+            <plt:portType name="tns:ds1_db_service_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/ds1_db_service" schemaLocation="xsd/ds1_db_service_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="ds1_db_serviceSelect_inputParameters">
+        <wsdl:part name="ds1_db_serviceSelect_inputParameters" element="top:ds1_db_serviceSelect_nameInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="ProductCollection_msg">
+        <wsdl:part name="ProductCollection" element="top:ProductCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="ds1_db_service_ptt">
+        <wsdl:operation name="ds1_db_serviceSelect">
+            <wsdl:input message="tns:ds1_db_serviceSelect_inputParameters"/>
+            <wsdl:output message="tns:ProductCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

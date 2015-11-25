@@ -1,0 +1,14 @@
+<adapter-config name="updateSeparateRegistry" adapter="Database Adapter" wsdlLocation="updateSeparateRegistry.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="updateSeparateRegistry_ptt" operation="update">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="updateSeparateRegistry.MedicineSeparateStatus"/>
+      <property name="DmlType" value="update"/>
+      <property name="MappingsMetaDataURL" value="updateSeparateRegistry-or-mappings.xml"/>
+      <property name="DetectOmissions" value="true"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

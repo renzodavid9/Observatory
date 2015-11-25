@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+    
+     targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns6="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores"
+     xmlns:tns7="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://soabpm-vm.site:7001/soa-infra/services/default/Project1!2.40/OsbWsdlGetMedicines.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="OsbWsdlGetMedicinesPortTypePartnerLinkType">
+        <plnk:role name="OsbWsdlGetMedicinesPortTypeProvider">
+            <plnk:portType name="tns:OsbWsdlGetMedicinesPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines">
+            <xsd:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" schemaLocation="http://soabpm-vm.site:7001/BPM_SERVICES/FindNearestDrugstore_BPM_Service/FindNearestDrugstore_Proxy?SCHEMA%2FBPM_SERVICES%2FFindNearestDrugstore_BPM_Service%2FXMLSchema_-1309485453"/>
+            <xsd:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore"
+                 schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/SetOfMedicinesDrugstore.xsd"/>
+            <xsd:element name="start3">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:SetOfDrugstores"/>
+                        <xsd:element name="medicine_name" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="start3Response">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns7:SetOfMedicinesDrugstore"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="start3">
+        <wsdl:part name="parameters" element="tns:start3"/>
+    </wsdl:message>
+    <wsdl:message name="start3Response">
+        <wsdl:part name="parameters" element="tns:start3Response"/>
+    </wsdl:message>
+    <wsdl:portType name="OsbWsdlGetMedicinesPortType">
+        <wsdl:operation name="start3">
+            <wsdl:input message="tns:start3"/>
+            <wsdl:output message="tns:start3Response"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="OsbWsdlGetMedicinesBinding" type="tns:OsbWsdlGetMedicinesPortType">
+        <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="start3">
+            <wsdlsoap:operation style="document" soapAction="start3"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="OsbWsdlGetMedicines.service">
+        <wsdl:port name="OsbWsdlGetMedicinesPort" binding="tns:OsbWsdlGetMedicinesBinding">
+            <wsdlsoap:address location="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/SetOfMedicinesDrugstore.xsd" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicinesDrugstore" ref="OTHER_SERVICES/MedicinesSearch/XMLSchema_1828258523"/>
+        <con:schemaRef isInclude="false" schemaLocation="http://soabpm-vm.site:7001/BPM_SERVICES/FindNearestDrugstore_BPM_Service/FindNearestDrugstore_Proxy?SCHEMA%2FBPM_SERVICES%2FFindNearestDrugstore_BPM_Service%2FXMLSchema_-1309485453" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" ref="OTHER_SERVICES/MedicinesSearch/XMLSchema_877330672"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines</con:targetNamespace>
+</con:wsdlEntry>

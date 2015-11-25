@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfManufacturers"
+     elementFormDefault="qualified" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Manufacturer"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfManufacturers"
+     xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Manufacturer" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/RecommendGeneric.service?XSD=businessCatalog/MyTipes/Manufacturer.xsd"/>
+    <xs:complexType name="SetOfManufacturersType">
+        <xs:sequence>
+            <xs:element name="manufacturers" nillable="true" type="ns1:ManufacturerType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SetOfManufacturers" type="SetOfManufacturersType"/>
+</xs:schema>]]></con:schema>
+    <con:dependencies>
+        <con:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Manufacturer" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/RecommendGeneric.service?XSD=businessCatalog/MyTipes/Manufacturer.xsd" ref="BPMServices/RecommendGeneric/XMLSchema_-2034460817"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfManufacturers</con:targetNamespace>
+</con:schemaEntry>

@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/EmpDBAdapterService" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/EmpDBAdapterService" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="ProductCollection" type="ProductCollection"/>
+   <xs:complexType name="ProductCollection">
+      <xs:sequence>
+         <xs:element name="Product" type="Product" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Product">
+      <xs:sequence>
+         <xs:element name="name" type="xs:string" minOccurs="0" nillable="true"/>
+         <xs:element name="price" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="generic" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="activeComponent" minOccurs="0">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="20"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="id">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="20"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="EmpDBAdapterServiceSelectInputParameters" type="EmpDBAdapterServiceSelect"/>
+   <xs:complexType name="EmpDBAdapterServiceSelect">
+      <xs:sequence/>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="GetSeparateStatus">
+        <topicDocumentations>
+            <topicDocumentation name="GetSeparateStatus">
+                <descriptions>
+                    <description locale="en">GetSeparateStatus</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14577763872396">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14577763872483">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1457777590714">
+                <labels>
+                    <label locale="en">selectSeparateRegistry_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf111"/>
+            <topicDocumentation name="sf113"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

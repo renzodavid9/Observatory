@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore" xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:complexType name="DrugstoreType">
+        <xs:sequence>
+            <xs:element name="id" nillable="true" type="xs:int"/>
+            <xs:element name="name" nillable="true" type="xs:string"/>
+            <xs:element name="shortname" nillable="true" type="xs:string"/>
+            <xs:element name="latitude" nillable="true" type="xs:decimal"/>
+            <xs:element name="longitude" nillable="true" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Drugstore" type="DrugstoreType"/>
+</xs:schema>]]></con:schema>
+    <con:targetNamespace>http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore</con:targetNamespace>
+</con:schemaEntry>

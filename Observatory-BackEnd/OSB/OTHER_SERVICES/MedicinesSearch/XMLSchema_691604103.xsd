@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine_X_Drugstore"
+     elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore"
+     xmlns:ns2="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine_X_Drugstore"
+     xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore" schemaLocation="http://soabpm-vm.site:7001/BPM_SERVICES/FindNearestDrugstore_BPM_Service/FindNearestDrugstore_Proxy?SCHEMA%2FBPM_SERVICES%2FFindNearestDrugstore_BPM_Service%2FXMLSchema_-1858335959"/>
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/Medicine.xsd"/>
+    <xs:complexType name="Medicine_X_DrugstoreType">
+        <xs:sequence>
+            <xs:element name="drugstore" nillable="true" type="ns1:DrugstoreType"/>
+            <xs:element name="medicines" nillable="true" type="ns2:MedicineType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Medicine_X_Drugstore" type="Medicine_X_DrugstoreType"/>
+</xs:schema>]]></con:schema>
+    <con:dependencies>
+        <con:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Drugstore" schemaLocation="http://soabpm-vm.site:7001/BPM_SERVICES/FindNearestDrugstore_BPM_Service/FindNearestDrugstore_Proxy?SCHEMA%2FBPM_SERVICES%2FFindNearestDrugstore_BPM_Service%2FXMLSchema_-1858335959" ref="OTHER_SERVICES/MedicinesSearch/XMLSchema_-37305546"/>
+        <con:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/OsbWsdlGetMedicines.service?XSD=businessCatalog/MyTipes/Medicine.xsd" ref="OTHER_SERVICES/MedicinesSearch/XMLSchema_1149885452"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine_X_Drugstore</con:targetNamespace>
+</con:schemaEntry>

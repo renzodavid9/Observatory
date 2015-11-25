@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?binding.jca updateSeparateRegistry_db.jca?>
+<wsdl:definitions name="updateSeparateRegistry" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/updateSeparateRegistry" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/updateSeparateRegistry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/updateSeparateRegistry">
+    <plt:partnerLinkType name="updateSeparateRegistry_plt">
+        <plt:role name="updateSeparateRegistry_role">
+            <plt:portType name="tns:updateSeparateRegistry_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/updateSeparateRegistry" schemaLocation="xsd/updateSeparateRegistry_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="MedicineSeparateStatusCollection_msg">
+        <wsdl:part name="MedicineSeparateStatusCollection" element="top:MedicineSeparateStatusCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="updateSeparateRegistry_ptt">
+        <wsdl:operation name="update">
+            <wsdl:input message="tns:MedicineSeparateStatusCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="xsd/updateSeparateRegistry_table.xsd" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/updateSeparateRegistry" ref="test4/updateSeparateRegistry/updateSeparateRegistry_table"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/updateSeparateRegistry</con:targetNamespace>
+</con:wsdlEntry>

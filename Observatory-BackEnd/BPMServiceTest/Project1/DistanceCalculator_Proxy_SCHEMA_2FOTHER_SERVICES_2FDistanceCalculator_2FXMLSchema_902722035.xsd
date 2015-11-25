@@ -1,0 +1,31 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xs:schema version="1.0" targetNamespace="http://DistanceCalc/" xmlns:tns="http://DistanceCalc/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="DistanceBetween2Points_km" type="tns:DistanceBetween2Points_km"/>
+    <xs:element name="DistanceBetween2Points_kmResponse" type="tns:DistanceBetween2Points_kmResponse"/>
+    <xs:element name="hello" type="tns:hello"/>
+    <xs:element name="helloResponse" type="tns:helloResponse"/>
+    <xs:complexType name="DistanceBetween2Points_km">
+        <xs:sequence>
+            <xs:element name="latitude1" type="xs:double" minOccurs="0"/>
+            <xs:element name="latitude2" type="xs:double" minOccurs="0"/>
+            <xs:element name="longitude1" type="xs:double" minOccurs="0"/>
+            <xs:element name="longitude2" type="xs:double" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DistanceBetween2Points_kmResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:double" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="hello">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="helloResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. -->

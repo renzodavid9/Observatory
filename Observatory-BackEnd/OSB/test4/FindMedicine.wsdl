@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine"  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns6="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" >
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine">
+            <xsd:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" schemaLocation="businessCatalog/MyTipes/SetOfDrugstores.xsd"/>
+            <xsd:element name="getAllDrugstoresResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:SetOfDrugstores"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getAllDrugstores">
+                <xsd:complexType>
+                    <xsd:sequence/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getAllDrugstoresResponse">
+        <wsdl:part name="parameters" element="tns:getAllDrugstoresResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getAllDrugstores">
+        <wsdl:part name="parameters" element="tns:getAllDrugstores"/>
+    </wsdl:message>
+    <wsdl:portType name="FindMedicinePortType">
+        <wsdl:operation name="getAllDrugstores">
+            <wsdl:input message="tns:getAllDrugstores"/>
+            <wsdl:output message="tns:getAllDrugstoresResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="FindMedicinePortTypePartnerLinkType">
+        <plnk:role name="FindMedicinePortTypeProvider">
+            <plnk:portType name="tns:FindMedicinePortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:binding name="FindMedicinePortTypeSOAP11Binding"
+                  type="tns:FindMedicinePortType">
+        <wsdlsoap:binding style="document"
+                          transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getAllDrugstores">
+            <wsdlsoap:operation style="document"
+                                soapAction="http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine/getAllDrugstores"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal" parts="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal" parts="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="businessCatalog/MyTipes/SetOfDrugstores.xsd" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" ref="test4/SetOfDrugstores"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpmn/bpmnProcess/FindMedicine</con:targetNamespace>
+</con:wsdlEntry>

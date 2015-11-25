@@ -1,0 +1,14 @@
+<adapter-config name="MyDBAdapterService" adapter="Database Adapter" wsdlLocation="MyDBAdapterService.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="MyDBAdapterService_ptt" operation="MyDBAdapterServiceSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="MyDBAdapterService.Product"/>
+      <property name="QueryName" value="MyDBAdapterServiceSelect"/>
+      <property name="MappingsMetaDataURL" value="MyDBAdapterService-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="FindMedicineInDrugstores">
+        <topicDocumentations>
+            <topicDocumentation name="FindMedicineInDrugstores">
+                <descriptions>
+                    <description locale="en">FindMedicineInDrugstores</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14480298797077">
+                <labels>
+                    <label locale="en">Subprocess</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14481942319223">
+                <labels>
+                    <label locale="en">findMedicine_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483055089370">
+                <labels>
+                    <label locale="en">Initializing medicines list</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483465145229">
+                <labels>
+                    <label locale="en">Copying medicines list</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT1448029895686">
+                <labels>
+                    <label locale="en">Start1</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14480298956963">
+                <labels>
+                    <label locale="en">End1</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14627481901960">
+                <labels>
+                    <label locale="en">NoResponse</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf67"/>
+            <topicDocumentation name="sf44"/>
+            <topicDocumentation name="sf90"/>
+            <topicDocumentation name="sf37"/>
+            <topicDocumentation name="sf100"/>
+            <topicDocumentation name="ACT14481021846952">
+                <labels>
+                    <label locale="en">ScriptTask1</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483545154852">
+                <labels>
+                    <label locale="en">Copying list of drugstores</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483682632361">
+                <labels>
+                    <label locale="en">Subprocess1</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483746700315">
+                <labels>
+                    <label locale="en">Getting medicines of drugstore</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483770828969">
+                <labels>
+                    <label locale="en">Subprocess2</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14483787451226">
+                <labels>
+                    <label locale="en">Inserting into list answer of medicines</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1462253618242">
+                <labels>
+                    <label locale="en">insertMedicineObs_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14483770829098">
+                <labels>
+                    <label locale="en">Start3</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14483770829088">
+                <labels>
+                    <label locale="en">End3</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="sf42"/>
+            <topicDocumentation name="sf44"/>
+            <topicDocumentation name="sf112"/>
+            <topicDocumentation name="ACT14613407865961">
+                <labels>
+                    <label locale="en">setting BI</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14483682733016">
+                <labels>
+                    <label locale="en">Start2</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14483682733155">
+                <labels>
+                    <label locale="en">End2</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14613325872853">
+                <labels>
+                    <label locale="en">medicines found?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14627708978215">
+                <labels>
+                    <label locale="en">No empty Medicine?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf39"/>
+            <topicDocumentation name="sf41"/>
+            <topicDocumentation name="sf43"/>
+            <topicDocumentation name="sf88">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf91"/>
+            <topicDocumentation name="sf93"/>
+            <topicDocumentation name="sf182">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf184">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14484012743516">
+                <labels>
+                    <label locale="en">Initializing answer list</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14484788316339">
+                <labels>
+                    <label locale="en">OK_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14484791385822">
+                <labels>
+                    <label locale="en">NO_MEDICINES_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14480215772439">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14480215772413">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW1448028924068">
+                <labels>
+                    <label locale="en">Criteria search?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14484777523644">
+                <labels>
+                    <label locale="en">Are medicines?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf59"/>
+            <topicDocumentation name="sf66">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf68"/>
+            <topicDocumentation name="sf45">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf47"/>
+            <topicDocumentation name="sf38"/>
+            <topicDocumentation name="sf40"/>
+            <topicDocumentation name="sf46"/>
+            <topicDocumentation name="sf67">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf70">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf72"/>
+            <topicDocumentation name="sf74"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

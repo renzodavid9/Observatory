@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="getGenerics" adapter="Database Adapter" wsdlLocation="getGenerics.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="getGenerics_ptt" operation="getGenerics">
+    <interaction-spec className="oracle.tip.adapter.db.DBPureSQLInteractionSpec">
+      <property name="SqlString" value="select  M.NAME as manufacturer,  MO.NAME as medicine from MANUFACTURER M, MEDICINES_OBSERVATORY MO where ((M.GENERIC= 1) AND (MO.ID_MANUFACTURER = M.ID) AND (MO.FK_ACTIVECOMP=#atcp))"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+    <input/>
+    <output/>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="getGenerics.wsdl" ref="test4/getGenerics/getGenerics"/>
+    </con:jcaDependency>
+</con:jcaEntry>

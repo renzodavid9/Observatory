@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="RecommendGeneric">
+        <topicDocumentations>
+            <topicDocumentation name="RecommendGeneric">
+                <descriptions>
+                    <description locale="en">RecommendGeneric</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14648220860318">
+                <labels>
+                    <label locale="en">getGenericId_Ativity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14648227279933">
+                <labels>
+                    <label locale="en">getManufacturers_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14654988645040">
+                <labels>
+                    <label locale="en">NOT_EXIST_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14631708000210">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14631708000222">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14648224330216">
+                <labels>
+                    <label locale="en">ParallelGateway</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14648225356480">
+                <labels>
+                    <label locale="en">ParallelGateway</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14655310014854">
+                <labels>
+                    <label locale="en">The component exist?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1465558466537">
+                <labels>
+                    <label locale="en">getGenerics_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14655625171398">
+                <labels>
+                    <label locale="en">OK_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14655729440426">
+                <labels>
+                    <label locale="en">There are generics?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14655743778642">
+                <labels>
+                    <label locale="en">NO_GENERICS_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf102"/>
+            <topicDocumentation name="sf140"/>
+            <topicDocumentation name="sf141"/>
+            <topicDocumentation name="sf142"/>
+            <topicDocumentation name="sf143"/>
+            <topicDocumentation name="sf145"/>
+            <topicDocumentation name="sf119"/>
+            <topicDocumentation name="sf108">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf110">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf115"/>
+            <topicDocumentation name="sf116"/>
+            <topicDocumentation name="sf117">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf120"/>
+            <topicDocumentation name="sf122"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

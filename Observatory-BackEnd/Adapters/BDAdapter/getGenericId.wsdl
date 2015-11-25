@@ -1,0 +1,25 @@
+<?binding.jca getGenericId_db.jca?>
+<wsdl:definitions name="getGenericId" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/getGenericId">
+    <plt:partnerLinkType name="getGenericId_plt">
+        <plt:role name="getGenericId_role">
+            <plt:portType name="tns:getGenericId_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getGenericId" schemaLocation="xsd/getGenericId_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getGenericIdSelect_inputParameters">
+        <wsdl:part name="getGenericIdSelect_inputParameters" element="top:getGenericIdSelect_cmp_nameInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="ActiveComponentCollection_msg">
+        <wsdl:part name="ActiveComponentCollection" element="top:ActiveComponentCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getGenericId_ptt">
+        <wsdl:operation name="getGenericIdSelect">
+            <wsdl:input message="tns:getGenericIdSelect_inputParameters"/>
+            <wsdl:output message="tns:ActiveComponentCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

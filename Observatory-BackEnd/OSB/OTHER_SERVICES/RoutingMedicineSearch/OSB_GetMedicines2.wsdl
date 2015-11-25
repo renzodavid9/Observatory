@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+    
+     targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines"
+     xmlns:tns6="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://soabpm-vm.site:7001/soa-infra/services/default/WSDL_Creator!1.0/OsbWsdlGetMedicines.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="OsbWsdlGetMedicinesPortTypePartnerLinkType">
+        <plnk:role name="OsbWsdlGetMedicinesPortTypeProvider">
+            <plnk:portType name="tns:OsbWsdlGetMedicinesPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines">
+            <xsd:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/WSDL_Creator/OsbWsdlGetMedicines.service?XSD=xsd/SetOfMedicines.xsd"/>
+            <xsd:element name="getMedicineResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:SetOfMedicines"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getMedicine">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="id" type="xsd:int"/>
+                        <xsd:element name="medicine_name" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getMedicine">
+        <wsdl:part name="parameters" element="tns:getMedicine"/>
+    </wsdl:message>
+    <wsdl:message name="getMedicineResponse">
+        <wsdl:part name="parameters" element="tns:getMedicineResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="OsbWsdlGetMedicinesPortType">
+        <wsdl:operation name="getMedicine">
+            <wsdl:input message="tns:getMedicine"/>
+            <wsdl:output message="tns:getMedicineResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="OsbWsdlGetMedicinesBinding" type="tns:OsbWsdlGetMedicinesPortType">
+        <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getMedicine">
+            <wsdlsoap:operation style="document" soapAction="getMedicine"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="OsbWsdlGetMedicines.service">
+        <wsdl:port name="OsbWsdlGetMedicinesPort" binding="tns:OsbWsdlGetMedicinesBinding">
+            <wsdlsoap:address location="http://soabpm-vm.site:7001//soa-infra/services/default/WSDL_Creator/OsbWsdlGetMedicines.service"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/WSDL_Creator/OsbWsdlGetMedicines.service?XSD=xsd/SetOfMedicines.xsd" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" ref="OTHER_SERVICES/RoutingMedicineSearch/XMLSchema_1000039831"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpmn/bpmnProcess/OsbWsdlGetMedicines</con:targetNamespace>
+</con:wsdlEntry>

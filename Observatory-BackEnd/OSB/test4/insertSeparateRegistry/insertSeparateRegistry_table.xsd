@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/insertSeparateRegistry" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/insertSeparateRegistry" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="MedicineSeparateStatusCollection" type="MedicineSeparateStatusCollection"/>
+   <xs:complexType name="MedicineSeparateStatusCollection">
+      <xs:sequence>
+         <xs:element name="MedicineSeparateStatus" type="MedicineSeparateStatus" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MedicineSeparateStatus">
+      <xs:sequence>
+         <xs:element name="id" type="xs:decimal"/>
+         <xs:element name="key" type="xs:string" minOccurs="0" nillable="true"/>
+         <xs:element name="drugstoreId" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="userId" type="xs:decimal" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>]]></con:schema>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/top/insertSeparateRegistry</con:targetNamespace>
+</con:schemaEntry>

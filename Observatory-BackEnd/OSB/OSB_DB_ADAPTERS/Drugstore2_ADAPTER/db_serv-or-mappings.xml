@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:xmlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:xml-content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="Eclipse Persistence Services - 2.3.1.v20111018-r10243">
+   <name>db_serv-OR</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="object-relational-class-mapping-descriptor">
+         <class>db_serv.Medicinedrug</class>
+         <alias>MEDICINEDRUG</alias>
+         <primary-key>
+            <field table="MEDICINEDRUG" name="ID" xsi:type="column"/>
+         </primary-key>
+         <events/>
+         <querying>
+            <queries>
+               <query name="db_servSelect" xsi:type="read-all-query">
+                  <criteria function="like" xsi:type="function-expression">
+                     <arguments>
+                        <argument function="upper" xsi:type="function-expression">
+                           <arguments>
+                              <argument name="name" xsi:type="query-key-expression">
+                                 <base xsi:type="base-expression"/>
+                              </argument>
+                           </arguments>
+                        </argument>
+                        <argument function="upper" xsi:type="function-expression">
+                           <arguments>
+                              <argument xsi:type="parameter-expression">
+                                 <parameter name="name" xsi:type="column"/>
+                              </argument>
+                           </arguments>
+                        </argument>
+                     </arguments>
+                  </criteria>
+                  <arguments>
+                     <argument name="name">
+                        <type>java.lang.String</type>
+                     </argument>
+                  </arguments>
+                  <reference-class>db_serv.Medicinedrug</reference-class>
+                  <container xsi:type="list-container-policy">
+                     <collection-type>java.util.Vector</collection-type>
+                  </container>
+               </query>
+            </queries>
+         </querying>
+         <attribute-mappings>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>id</attribute-name>
+               <field table="MEDICINEDRUG" name="ID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>name</attribute-name>
+               <field table="MEDICINEDRUG" name="NAME" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>invimacod</attribute-name>
+               <field table="MEDICINEDRUG" name="INVIMACOD" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>record</attribute-name>
+               <field table="MEDICINEDRUG" name="RECORD" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>unit</attribute-name>
+               <field table="MEDICINEDRUG" name="UNIT" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>atc</attribute-name>
+               <field table="MEDICINEDRUG" name="ATC" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>atcdesc</attribute-name>
+               <field table="MEDICINEDRUG" name="ATCDESC" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>administration</attribute-name>
+               <field table="MEDICINEDRUG" name="ADMINISTRATION" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>activeprinc</attribute-name>
+               <field table="MEDICINEDRUG" name="ACTIVEPRINC" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>pharmform</attribute-name>
+               <field table="MEDICINEDRUG" name="PHARMFORM" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>manufacturer</attribute-name>
+               <field table="MEDICINEDRUG" name="MANUFACTURER" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>drugstoreid</attribute-name>
+               <field table="MEDICINEDRUG" name="DRUGSTOREID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>commercialprice</attribute-name>
+               <field table="MEDICINEDRUG" name="COMMERCIALPRICE" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+         </attribute-mappings>
+         <descriptor-type>independent</descriptor-type>
+         <caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+            <always-refresh>true</always-refresh>
+         </caching>
+         <remote-caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+         </remote-caching>
+         <instantiation/>
+         <copying xsi:type="instantiation-copy-policy"/>
+         <tables>
+            <table name="MEDICINEDRUG"/>
+         </tables>
+         <structure>structureName</structure>
+      </class-mapping-descriptor>
+   </class-mapping-descriptors>
+   <login xsi:type="database-login">
+      <platform-class>org.eclipse.persistence.platform.database.oracle.Oracle9Platform</platform-class>
+      <connection-url></connection-url>
+   </login>
+</object-persistence>]]></con:xml-content>
+</con:xmlEntry>

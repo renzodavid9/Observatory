@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?binding.jca getManufacturers_db.jca?>
+<wsdl:definitions name="getManufacturers" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getManufacturers" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/getManufacturers" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getManufacturers" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+    <plt:partnerLinkType name="getManufacturers_plt">
+        <plt:role name="getManufacturers_role">
+            <plt:portType name="tns:getManufacturers_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/getManufacturers" schemaLocation="xsd/getManufacturers.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getManufacturersInput_msg">
+        <wsdl:part name="getManufacturersInput_msg" element="db:getManufacturersInput"/>
+    </wsdl:message>
+    <wsdl:message name="getManufacturersOutputCollection_msg">
+        <wsdl:part name="getManufacturersOutputCollection" element="db:getManufacturersOutputCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getManufacturers_ptt">
+        <wsdl:operation name="getManufacturers">
+            <wsdl:input message="tns:getManufacturersInput_msg"/>
+            <wsdl:output message="tns:getManufacturersOutputCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="xsd/getManufacturers.xsd" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/getManufacturers" ref="test4/getManufacturers/getManufacturers"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getManufacturers</con:targetNamespace>
+</con:wsdlEntry>

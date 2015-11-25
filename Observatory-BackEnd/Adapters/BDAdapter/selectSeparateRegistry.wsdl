@@ -1,0 +1,25 @@
+<?binding.jca selectSeparateRegistry_db.jca?>
+<wsdl:definitions name="selectSeparateRegistry" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectSeparateRegistry" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectSeparateRegistry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/selectSeparateRegistry">
+    <plt:partnerLinkType name="selectSeparateRegistry_plt">
+        <plt:role name="selectSeparateRegistry_role">
+            <plt:portType name="tns:selectSeparateRegistry_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/selectSeparateRegistry" schemaLocation="xsd/selectSeparateRegistry_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="selectSeparateRegistrySelect_inputParameters">
+        <wsdl:part name="selectSeparateRegistrySelect_inputParameters" element="top:selectSeparateRegistrySelect_mkeyInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="MedicineSeparateStatusCollection_msg">
+        <wsdl:part name="MedicineSeparateStatusCollection" element="top:MedicineSeparateStatusCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="selectSeparateRegistry_ptt">
+        <wsdl:operation name="selectSeparateRegistrySelect">
+            <wsdl:input message="tns:selectSeparateRegistrySelect_inputParameters"/>
+            <wsdl:output message="tns:MedicineSeparateStatusCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

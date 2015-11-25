@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="DrugstoreLogOut">
+        <topicDocumentations>
+            <topicDocumentation name="DrugstoreLogOut">
+                <descriptions>
+                    <description locale="en">DrugstoreLogOut</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14621911852228">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14621911852352">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1462191453554">
+                <labels>
+                    <label locale="en">updateOwnerSession_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf98"/>
+            <topicDocumentation name="sf100"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

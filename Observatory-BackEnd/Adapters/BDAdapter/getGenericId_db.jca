@@ -1,0 +1,14 @@
+<adapter-config name="getGenericId" adapter="Database Adapter" wsdlLocation="getGenericId.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="getGenericId_ptt" operation="getGenericIdSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="getGenericId.ActiveComponent"/>
+      <property name="QueryName" value="getGenericIdSelect"/>
+      <property name="MappingsMetaDataURL" value="getGenericId-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

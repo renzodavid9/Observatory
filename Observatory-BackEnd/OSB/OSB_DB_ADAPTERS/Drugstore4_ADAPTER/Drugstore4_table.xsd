@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore4" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore4" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="MedicineCollection" type="MedicineCollection"/>
+   <xs:complexType name="MedicineCollection">
+      <xs:sequence>
+         <xs:element name="Medicine" type="Medicine" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Medicine">
+      <xs:sequence>
+         <xs:element name="id" type="xs:long"/>
+         <xs:element name="name" type="xs:string" minOccurs="0" nillable="true"/>
+         <xs:element name="price" type="xs:decimal" minOccurs="0" nillable="true"/>
+         <xs:element name="actComponent" minOccurs="0" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="250"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="presentation" minOccurs="0" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="250"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Drugstore4Select_mnameInputParameters" type="Drugstore4Select_mname"/>
+   <xs:complexType name="Drugstore4Select_mname">
+      <xs:sequence>
+         <xs:element name="mname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>]]></con:schema>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore4</con:targetNamespace>
+</con:schemaEntry>

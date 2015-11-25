@@ -1,0 +1,25 @@
+<?binding.jca getGenerics_db.jca?>
+<wsdl:definitions name="getGenerics" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenerics" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/getGenerics" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenerics" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+    <plt:partnerLinkType name="getGenerics_plt">
+        <plt:role name="getGenerics_role">
+            <plt:portType name="tns:getGenerics_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/getGenerics" schemaLocation="xsd/getGenerics.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getGenericsInput_msg">
+        <wsdl:part name="getGenericsInput_msg" element="db:getGenericsInput"/>
+    </wsdl:message>
+    <wsdl:message name="getGenericsOutputCollection_msg">
+        <wsdl:part name="getGenericsOutputCollection" element="db:getGenericsOutputCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getGenerics_ptt">
+        <wsdl:operation name="getGenerics">
+            <wsdl:input message="tns:getGenericsInput_msg"/>
+            <wsdl:output message="tns:getGenericsOutputCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

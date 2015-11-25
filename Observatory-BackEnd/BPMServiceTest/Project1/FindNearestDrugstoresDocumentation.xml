@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.8" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="FindNearestDrugstores">
+        <topicDocumentations>
+            <topicDocumentation name="FindNearestDrugstores">
+                <descriptions>
+                    <description locale="en">FindNearestDrugstores</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14402904781328">
+                <labels>
+                    <label locale="en">getAllDrugstores_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14402941455161">
+                <labels>
+                    <label locale="en">OK_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14402950659929">
+                <labels>
+                    <label locale="en">ERROR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14419804237715">
+                <labels>
+                    <label locale="en">Subprocess</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14419911220824">
+                <labels>
+                    <label locale="en">distanceUserDrugstore_Activity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1442000303001">
+                <labels>
+                    <label locale="en">Inserting in nearest drugstores</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT14508234613386">
+                <labels>
+                    <label locale="en">Setting indicators value</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14419804368676">
+                <labels>
+                    <label locale="en">Start1</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14419804368717">
+                <labels>
+                    <label locale="en">End1</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14419986331714">
+                <labels>
+                    <label locale="en">Is in the ratio?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf23"/>
+            <topicDocumentation name="sf25"/>
+            <topicDocumentation name="sf26"/>
+            <topicDocumentation name="sf27"/>
+            <topicDocumentation name="sf29">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf64"/>
+            <topicDocumentation name="ACT14420833668033">
+                <labels>
+                    <label locale="en">Initializing_array</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1442195202939">
+                <labels>
+                    <label locale="en">NOT_NEAR_Code</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14396662815045">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT14396662815146">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14402935980991">
+                <labels>
+                    <label locale="en">Are drugstores?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW14421845231035">
+                <labels>
+                    <label locale="en">Drugstores nearby?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf9"/>
+            <topicDocumentation name="sf10"/>
+            <topicDocumentation name="sf11">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf12"/>
+            <topicDocumentation name="sf14">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf16"/>
+            <topicDocumentation name="sf24"/>
+            <topicDocumentation name="sf25"/>
+            <topicDocumentation name="sf26">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf28">
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf30"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

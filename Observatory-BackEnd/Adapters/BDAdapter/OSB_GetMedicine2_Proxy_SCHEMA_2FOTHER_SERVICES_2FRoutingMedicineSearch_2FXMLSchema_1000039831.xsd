@@ -1,0 +1,12 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" elementFormDefault="qualified"
+     xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfMedicines" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+     xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" schemaLocation="OSB_GetMedicine2_Proxy_SCHEMA_2FOTHER_SERVICES_2FRoutingMedicineSearch_2FXMLSchema_1521890609.xsd"/>
+    <xs:complexType name="SetOfMedicinesType">
+        <xs:sequence>
+            <xs:element name="medicines" nillable="true" type="ns1:MedicineType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SetOfMedicines" type="SetOfMedicinesType"/>
+</xs:schema>

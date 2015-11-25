@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId" name="getGenericId-concrete" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId" location="getGenericId.wsdl"/>
+  <binding name="getGenericId_ptt-binding" type="tns:getGenericId_ptt">
+    <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+    <operation name="getGenericIdSelect">
+      <soap:operation soapAction="getGenericIdSelect"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="getGenericId-service">
+    <port name="getGenericId-port" binding="tns:getGenericId_ptt-binding">
+      <soap:address location="jca://myConnPoolForDB"/>
+    </port>
+  </service>
+</definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:import location="getGenericId.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId">
+            <con:wsdl ref="test4/getGenericId/getGenericId"/>
+        </con:import>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getGenericId</con:targetNamespace>
+</con:wsdlEntry>

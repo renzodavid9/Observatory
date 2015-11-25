@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine" elementFormDefault="qualified"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine"
+     xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/">
+    <xs:complexType name="MedicineType">
+        <xs:sequence>
+            <xs:element name="name" nillable="true" type="xs:string"/>
+            <xs:element name="invima_code" nillable="true" type="xs:string"/>
+            <xs:element name="record" nillable="true" type="xs:int"/>
+            <xs:element name="unit" nillable="true" type="xs:string"/>
+            <xs:element name="atc" nillable="true" type="xs:string"/>
+            <xs:element name="atc_description" nillable="true" type="xs:string"/>
+            <xs:element name="administration" nillable="true" type="xs:string"/>
+            <xs:element name="active_principle" nillable="true" type="xs:string"/>
+            <xs:element name="pharmaceutical_form" nillable="true" type="xs:string"/>
+            <xs:element name="manufacturer" nillable="true" type="xs:string"/>
+            <xs:element name="drugstore_id" nillable="true" type="xs:int"/>
+            <xs:element name="commercial_price" nillable="true" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Medicine" type="MedicineType"/>
+</xs:schema>]]></con:schema>
+    <con:targetNamespace>http://xmlns.oracle.com/bpm/bpmobject/MyTipes/Medicine</con:targetNamespace>
+</con:schemaEntry>

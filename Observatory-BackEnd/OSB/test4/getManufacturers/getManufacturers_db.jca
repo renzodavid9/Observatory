@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="getManufacturers" adapter="Database Adapter" wsdlLocation="getManufacturers.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="getManufacturers_ptt" operation="getManufacturers">
+    <interaction-spec className="oracle.tip.adapter.db.DBPureSQLInteractionSpec">
+      <property name="SqlString" value="select  M.NAME as name,count (*) as tot FROM MANUFACTURER M, MEDICINES_OBSERVATORY MO where ((M.GENERIC= 1) AND (MO.ID_MANUFACTURER = M.ID) AND (MO.FK_ACTIVECOMP=#atcp)) group by M.NAME ORDER BY M.NAME"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+    <input/>
+    <output/>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="getManufacturers.wsdl" ref="test4/getManufacturers/getManufacturers"/>
+    </con:jcaDependency>
+</con:jcaEntry>

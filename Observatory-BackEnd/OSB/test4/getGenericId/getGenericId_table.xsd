@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:schemaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:schema><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getGenericId" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/getGenericId" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="ActiveComponentCollection" type="ActiveComponentCollection"/>
+   <xs:complexType name="ActiveComponentCollection">
+      <xs:sequence>
+         <xs:element name="ActiveComponent" type="ActiveComponent" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ActiveComponent">
+      <xs:sequence>
+         <xs:element name="id" type="xs:decimal"/>
+         <xs:element name="name" type="xs:string" minOccurs="0" nillable="true"/>
+         <xs:element name="identifier" type="xs:decimal" minOccurs="0" nillable="true"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="getGenericIdSelect_cmp_nameInputParameters" type="getGenericIdSelect_cmp_name"/>
+   <xs:complexType name="getGenericIdSelect_cmp_name">
+      <xs:sequence>
+         <xs:element name="cmp_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>]]></con:schema>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/top/getGenericId</con:targetNamespace>
+</con:schemaEntry>

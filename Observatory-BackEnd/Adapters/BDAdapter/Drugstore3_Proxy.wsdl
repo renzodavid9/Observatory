@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions
+     name="getMedicineName"
+     targetNamespace="http://ws/"
+     xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:WL5G3N1="http://ws/"
+    >
+    <WL5G3N0:types>
+        <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+             xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy"
+             xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://ws/" schemaLocation="Drugstore3_Proxy_SCHEMA_2FOSB_DB_ADAPTERS_2FDrugstore3_ADAPTER_2FXMLSchema_916599902.xsd"/>
+        </xsd:schema>
+    </WL5G3N0:types>
+    <WL5G3N0:message name="getMedicineName2">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:getMedicineName2"/>
+    </WL5G3N0:message>
+    <WL5G3N0:message name="getMedicineName2Response">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:getMedicineName2Response"/>
+    </WL5G3N0:message>
+    <WL5G3N0:message name="hello">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:hello"/>
+    </WL5G3N0:message>
+    <WL5G3N0:message name="helloResponse">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:helloResponse"/>
+    </WL5G3N0:message>
+    <WL5G3N0:portType name="getMedicineName">
+        <WL5G3N0:operation name="getMedicineName2">
+            <WL5G3N0:input message="WL5G3N1:getMedicineName2"/>
+            <WL5G3N0:output message="WL5G3N1:getMedicineName2Response"/>
+        </WL5G3N0:operation>
+        <WL5G3N0:operation name="hello">
+            <WL5G3N0:input message="WL5G3N1:hello"/>
+            <WL5G3N0:output message="WL5G3N1:helloResponse"/>
+        </WL5G3N0:operation>
+    </WL5G3N0:portType>
+    <WL5G3N0:binding name="getMedicineNamePortBinding" type="WL5G3N1:getMedicineName">
+        <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <WL5G3N0:operation name="getMedicineName2">
+            <WL5G3N2:operation/>
+            <WL5G3N0:input>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:input>
+            <WL5G3N0:output>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:output>
+        </WL5G3N0:operation>
+        <WL5G3N0:operation name="hello">
+            <WL5G3N2:operation/>
+            <WL5G3N0:input>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:input>
+            <WL5G3N0:output>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:output>
+        </WL5G3N0:operation>
+    </WL5G3N0:binding>
+    <WL5G3N0:service name="getMedicineName">
+        <WL5G3N0:port name="getMedicineNamePort" binding="WL5G3N1:getMedicineNamePortBinding">
+            <WL5G3N2:address location="http://localhost:7001/OSB_DB_ADAPTERS/Drugstore3_ADAPTER/Drugstore3_Proxy"/>
+        </WL5G3N0:port>
+    </WL5G3N0:service>
+</WL5G3N0:definitions>

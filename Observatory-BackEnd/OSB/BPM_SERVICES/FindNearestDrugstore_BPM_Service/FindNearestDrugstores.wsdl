@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions
+    
+     targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/FindNearestDrugstores"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/FindNearestDrugstores"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns6="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://soabpm-vm.site:7001/soa-infra/services/default/Project1!2.12/FindNearestDrugstores.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="FindNearestDrugstoresPortTypePartnerLinkType">
+        <plnk:role name="FindNearestDrugstoresPortTypeProvider">
+            <plnk:portType name="tns:FindNearestDrugstoresPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/FindNearestDrugstores">
+            <xsd:import namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/FindNearestDrugstores.service?XSD=businessCatalog/MyTipes/SetOfDrugstores.xsd"/>
+            <xsd:element name="start">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="user_latitude" type="xsd:double"/>
+                        <xsd:element name="user_longitude" type="xsd:double"/>
+                        <xsd:element name="user_ratio_search" type="xsd:double"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="startResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:SetOfDrugstores"/>
+                        <xsd:element name="message_code" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="start">
+        <wsdl:part name="parameters" element="tns:start"/>
+    </wsdl:message>
+    <wsdl:message name="startResponse">
+        <wsdl:part name="parameters" element="tns:startResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="FindNearestDrugstoresPortType">
+        <wsdl:operation name="start">
+            <wsdl:input message="tns:start"/>
+            <wsdl:output message="tns:startResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="FindNearestDrugstoresBinding" type="tns:FindNearestDrugstoresPortType">
+        <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="start">
+            <wsdlsoap:operation style="document" soapAction="start"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="FindNearestDrugstores.service">
+        <wsdl:port name="FindNearestDrugstoresPort" binding="tns:FindNearestDrugstoresBinding">
+            <wsdlsoap:address location="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/FindNearestDrugstores.service"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="http://soabpm-vm.site:7001//soa-infra/services/default/Project1/FindNearestDrugstores.service?XSD=businessCatalog/MyTipes/SetOfDrugstores.xsd" namespace="http://xmlns.oracle.com/bpm/bpmobject/MyTipes/SetOfDrugstores" ref="BPM_SERVICES/FindNearestDrugstore_BPM_Service/XMLSchema_-1309485453"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/bpmn/bpmnProcess/FindNearestDrugstores</con:targetNamespace>
+</con:wsdlEntry>

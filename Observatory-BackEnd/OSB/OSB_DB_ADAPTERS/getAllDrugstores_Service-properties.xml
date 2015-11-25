@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:xmlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:xml-content><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="DRUGSTORE.LATITUDE:db_column_not_null">true</entry>
+   <entry key="DRUGSTORE.NAME:db_column_type">VARCHAR2</entry>
+   <entry key="DRUGSTORE.SHORTNAME:db_column_size">50</entry>
+   <entry key="DRUGSTORE.NAME:db_column_not_null">true</entry>
+   <entry key="DRUGSTORE.LATITUDE:db_column_precision">0</entry>
+   <entry key="DRUGSTORE.ID:db_column_type">NUMBER</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="DRUGSTORE.NAME:db_column_size">150</entry>
+   <entry key="DRUGSTORE:db_table_type">TABLE</entry>
+   <entry key="DRUGSTORE:db_column_4">LONGITUDE</entry>
+   <entry key="DRUGSTORE:db_column_3">LATITUDE</entry>
+   <entry key="DRUGSTORE.LONGITUDE:db_column_type">NUMBER</entry>
+   <entry key="DRUGSTORE:db_column_2">SHORTNAME</entry>
+   <entry key="DRUGSTORE.LONGITUDE:db_column_precision">0</entry>
+   <entry key="DRUGSTORE:db_column_1">NAME</entry>
+   <entry key="DRUGSTORE:db_column_0">ID</entry>
+   <entry key="DRUGSTORE.LATITUDE:db_column_type">NUMBER</entry>
+   <entry key="root_descriptor_alias">DRUGSTORE</entry>
+   <entry key="DRUGSTORE.LONGITUDE:db_column_not_null">true</entry>
+   <entry key="DRUGSTORE.SHORTNAME:db_column_type">VARCHAR2</entry>
+   <entry key="DRUGSTORE.ID:db_column_precision">0</entry>
+   <entry key="DRUGSTORE.ID:db_column_not_null">true</entry>
+   <entry key="DRUGSTORE.SHORTNAME:db_column_not_null">false</entry>
+</properties>]]></con:xml-content>
+</con:xmlEntry>

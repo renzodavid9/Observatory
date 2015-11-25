@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?binding.jca selectDrugstoreOwner_db.jca?>
+<wsdl:definitions name="selectDrugstoreOwner" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/selectDrugstoreOwner">
+    <plt:partnerLinkType name="selectDrugstoreOwner_plt">
+        <plt:role name="selectDrugstoreOwner_role">
+            <plt:portType name="tns:selectDrugstoreOwner_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/selectDrugstoreOwner" schemaLocation="xsd/selectDrugstoreOwner_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="selectDrugstoreOwnerSelect_inputParameters">
+        <wsdl:part name="selectDrugstoreOwnerSelect_inputParameters" element="top:selectDrugstoreOwnerSelect_username_passwordInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="OwnerCollection_msg">
+        <wsdl:part name="OwnerCollection" element="top:OwnerCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="selectDrugstoreOwner_ptt">
+        <wsdl:operation name="selectDrugstoreOwnerSelect">
+            <wsdl:input message="tns:selectDrugstoreOwnerSelect_inputParameters"/>
+            <wsdl:output message="tns:OwnerCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="xsd/selectDrugstoreOwner_table.xsd" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/selectDrugstoreOwner" ref="test4/selectDrugstoreOwner/selectDrugstoreOwner_table"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/selectDrugstoreOwner</con:targetNamespace>
+</con:wsdlEntry>

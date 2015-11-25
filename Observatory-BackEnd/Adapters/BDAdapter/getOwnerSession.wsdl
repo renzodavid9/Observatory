@@ -1,0 +1,25 @@
+<?binding.jca getOwnerSession_db.jca?>
+<wsdl:definitions name="getOwnerSession" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getOwnerSession" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/getOwnerSession" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/getOwnerSession">
+    <plt:partnerLinkType name="getOwnerSession_plt">
+        <plt:role name="getOwnerSession_role">
+            <plt:portType name="tns:getOwnerSession_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getOwnerSession" schemaLocation="xsd/getOwnerSession_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getOwnerSessionSelect_inputParameters">
+        <wsdl:part name="getOwnerSessionSelect_inputParameters" element="top:getOwnerSessionSelect_drugid_logInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="OwnerCollection_msg">
+        <wsdl:part name="OwnerCollection" element="top:OwnerCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getOwnerSession_ptt">
+        <wsdl:operation name="getOwnerSessionSelect">
+            <wsdl:input message="tns:getOwnerSessionSelect_inputParameters"/>
+            <wsdl:output message="tns:OwnerCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

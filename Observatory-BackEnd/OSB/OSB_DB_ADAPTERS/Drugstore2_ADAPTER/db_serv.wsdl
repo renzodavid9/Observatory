@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?binding.jca db_serv_db.jca?>
+<wsdl:definitions name="db_serv" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/db_serv" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/db_serv" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/db_serv">
+    <plt:partnerLinkType name="db_serv_plt">
+        <plt:role name="db_serv_role">
+            <plt:portType name="tns:db_serv_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/db_serv" schemaLocation="xsd/db_serv_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="db_servSelect_inputParameters">
+        <wsdl:part name="db_servSelect_inputParameters" element="top:db_servSelect_nameInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="MedicinedrugCollection_msg">
+        <wsdl:part name="MedicinedrugCollection" element="top:MedicinedrugCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="db_serv_ptt">
+        <wsdl:operation name="db_servSelect">
+            <wsdl:input message="tns:db_servSelect_inputParameters"/>
+            <wsdl:output message="tns:MedicinedrugCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="xsd/db_serv_table.xsd" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/db_serv" ref="OSB_DB_ADAPTERS/Drugstore2_ADAPTER/db_serv_table"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/db_serv</con:targetNamespace>
+</con:wsdlEntry>

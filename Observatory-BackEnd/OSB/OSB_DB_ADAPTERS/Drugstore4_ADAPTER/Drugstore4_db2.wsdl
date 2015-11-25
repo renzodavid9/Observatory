@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4" name="Drugstore4-concrete" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4" location="Drugstore4.wsdl"/>
+  <binding name="Drugstore4_ptt-binding" type="tns:Drugstore4_ptt">
+    <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+    <operation name="merge">
+      <soap:operation soapAction="merge"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+    </operation>
+    <operation name="insert">
+      <soap:operation soapAction="insert"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+    </operation>
+    <operation name="Drugstore4Select">
+      <soap:operation soapAction="Drugstore4Select"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="Drugstore4-service">
+    <port name="Drugstore4-port" binding="tns:Drugstore4_ptt-binding">
+      <soap:address location="jca://myConnPoolForMSSQL"/>
+    </port>
+  </service>
+</definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:import location="Drugstore4.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4">
+            <con:wsdl ref="OSB_DB_ADAPTERS/Drugstore4_ADAPTER/Drugstore4"/>
+        </con:import>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4</con:targetNamespace>
+</con:wsdlEntry>

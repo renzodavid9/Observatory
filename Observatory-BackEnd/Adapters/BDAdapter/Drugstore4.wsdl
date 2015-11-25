@@ -1,0 +1,31 @@
+<?binding.jca Drugstore4_db.jca?>
+<wsdl:definitions name="Drugstore4" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore4" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore4">
+    <plt:partnerLinkType name="Drugstore4_plt">
+        <plt:role name="Drugstore4_role">
+            <plt:portType name="tns:Drugstore4_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore4" schemaLocation="xsd/Drugstore4_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="MedicineCollection_msg">
+        <wsdl:part name="MedicineCollection" element="top:MedicineCollection"/>
+    </wsdl:message>
+    <wsdl:message name="Drugstore4Select_inputParameters">
+        <wsdl:part name="Drugstore4Select_inputParameters" element="top:Drugstore4Select_mnameInputParameters"/>
+    </wsdl:message>
+    <wsdl:portType name="Drugstore4_ptt">
+        <wsdl:operation name="merge">
+            <wsdl:input message="tns:MedicineCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:MedicineCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="Drugstore4Select">
+            <wsdl:input message="tns:Drugstore4Select_inputParameters"/>
+            <wsdl:output message="tns:MedicineCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

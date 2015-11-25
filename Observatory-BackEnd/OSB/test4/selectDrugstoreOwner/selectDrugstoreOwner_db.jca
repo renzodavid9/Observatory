@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="selectDrugstoreOwner" adapter="Database Adapter" wsdlLocation="selectDrugstoreOwner.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="selectDrugstoreOwner_ptt" operation="selectDrugstoreOwnerSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="selectDrugstoreOwner.Owner"/>
+      <property name="QueryName" value="selectDrugstoreOwnerSelect"/>
+      <property name="MappingsMetaDataURL" value="selectDrugstoreOwner-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="selectDrugstoreOwner.wsdl" ref="test4/selectDrugstoreOwner/selectDrugstoreOwner"/>
+        <con:toplinkRef toplinkFile="selectDrugstoreOwner-or-mappings.xml" ref="test4/selectDrugstoreOwner/selectDrugstoreOwner-or-mappings"/>
+    </con:jcaDependency>
+</con:jcaEntry>

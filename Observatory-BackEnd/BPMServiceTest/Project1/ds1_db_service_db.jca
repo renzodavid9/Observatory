@@ -1,0 +1,14 @@
+<adapter-config name="ds1_db_service" adapter="Database Adapter" wsdlLocation="ds1_db_service.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="ObservatoryDB" adapterRef=""/>
+  <endpoint-interaction portType="ds1_db_service_ptt" operation="ds1_db_serviceSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="ds1_db_service.Product"/>
+      <property name="QueryName" value="ds1_db_serviceSelect"/>
+      <property name="MappingsMetaDataURL" value="ds1_db_service-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

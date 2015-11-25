@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-persistence xmlns="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eclipselink="http://www.eclipse.org/eclipselink/xsds/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="Eclipse Persistence Services - 2.3.1.v20111018-r10243">
+   <name>getGenericId-OR</name>
+   <class-mapping-descriptors>
+      <class-mapping-descriptor xsi:type="object-relational-class-mapping-descriptor">
+         <class>getGenericId.ActiveComponent</class>
+         <alias>ACTIVE_COMPONENT</alias>
+         <primary-key>
+            <field table="ACTIVE_COMPONENT" name="ID" xsi:type="column"/>
+         </primary-key>
+         <events/>
+         <querying>
+            <queries>
+               <query name="getGenericIdSelect" xsi:type="read-all-query">
+                  <criteria function="like" xsi:type="function-expression">
+                     <arguments>
+                        <argument function="upper" xsi:type="function-expression">
+                           <arguments>
+                              <argument name="name" xsi:type="query-key-expression">
+                                 <base xsi:type="base-expression"/>
+                              </argument>
+                           </arguments>
+                        </argument>
+                        <argument function="upper" xsi:type="function-expression">
+                           <arguments>
+                              <argument xsi:type="parameter-expression">
+                                 <parameter name="cmp_name" xsi:type="column"/>
+                              </argument>
+                           </arguments>
+                        </argument>
+                     </arguments>
+                  </criteria>
+                  <arguments>
+                     <argument name="cmp_name">
+                        <type>java.lang.String</type>
+                     </argument>
+                  </arguments>
+                  <reference-class>getGenericId.ActiveComponent</reference-class>
+                  <container xsi:type="list-container-policy">
+                     <collection-type>java.util.Vector</collection-type>
+                  </container>
+               </query>
+            </queries>
+         </querying>
+         <attribute-mappings>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>id</attribute-name>
+               <field table="ACTIVE_COMPONENT" name="ID" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>name</attribute-name>
+               <field table="ACTIVE_COMPONENT" name="NAME" xsi:type="column"/>
+               <attribute-classification>java.lang.String</attribute-classification>
+            </attribute-mapping>
+            <attribute-mapping xsi:type="direct-mapping">
+               <attribute-name>identifier</attribute-name>
+               <field table="ACTIVE_COMPONENT" name="IDENTIFIER" xsi:type="column"/>
+               <attribute-classification>java.math.BigDecimal</attribute-classification>
+            </attribute-mapping>
+         </attribute-mappings>
+         <descriptor-type>independent</descriptor-type>
+         <caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+            <always-refresh>true</always-refresh>
+         </caching>
+         <remote-caching>
+            <cache-type>weak-reference</cache-type>
+            <cache-size>-1</cache-size>
+         </remote-caching>
+         <instantiation/>
+         <copying xsi:type="instantiation-copy-policy"/>
+         <tables>
+            <table name="ACTIVE_COMPONENT"/>
+         </tables>
+         <structure>structureName</structure>
+      </class-mapping-descriptor>
+   </class-mapping-descriptors>
+   <login xsi:type="database-login">
+      <platform-class>org.eclipse.persistence.platform.database.oracle.Oracle9Platform</platform-class>
+      <connection-url></connection-url>
+   </login>
+</object-persistence>

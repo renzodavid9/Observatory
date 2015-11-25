@@ -1,0 +1,63 @@
+<?binding.jca MyDBAdapterService_db.jca?>
+<wsdl:definitions name="MyDBAdapterService" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/MyDBAdapterService" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/MyDBAdapterService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/MyDBAdapterService"
+                  xmlns:jca="http://schemas.xmlsoap.org/wsdl/jca/"
+                  xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <plt:partnerLinkType name="MyDBAdapterService_plt">
+        <plt:role name="MyDBAdapterService_role">
+            <plt:portType name="tns:MyDBAdapterService_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/MyDBAdapterService" schemaLocation="xsd/MyDBAdapterService_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="MyDBAdapterServiceSelect_inputParameters">
+        <wsdl:part name="MyDBAdapterServiceSelect_inputParameters" element="top:MyDBAdapterServiceSelectInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="ProductCollection_msg">
+        <wsdl:part name="ProductCollection" element="top:ProductCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="MyDBAdapterService_ptt">
+        <wsdl:operation name="MyDBAdapterServiceSelect">
+            <wsdl:input message="tns:MyDBAdapterServiceSelect_inputParameters"/>
+            <wsdl:output message="tns:ProductCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="MyDBAdapterService_pttSOAP11Binding"
+                  type="tns:MyDBAdapterService_ptt">
+        <soap:binding style="document"
+                      transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="MyDBAdapterServiceSelect">
+            <soap:operation style="document"
+                            soapAction="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/MyDBAdapterService/MyDBAdapterServiceSelect"/>
+            <wsdl:input>
+                <soap:body use="literal"
+                           parts="MyDBAdapterServiceSelect_inputParameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="ProductCollection"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="MyDBAdapterService_pttJCABinding"
+                  type="tns:MyDBAdapterService_ptt">
+        <jca:binding/>
+        <format:typeMapping encoding="Java" style="Java">
+            <format:typeMap typeName="top:MyDBAdapterServiceSelectInputParameters"
+                            formatType=""/>
+            <format:typeMap typeName="top:ProductCollection" formatType=""/>
+        </format:typeMapping>
+        <wsdl:operation name="MyDBAdapterServiceSelect">
+            <jca:operation methodName="MyDBAdapterServiceSelect"
+                           InteractionSpec=""/>
+            <wsdl:input>
+                <jca:header/>
+            </wsdl:input>
+            <wsdl:output>
+                <jca:header/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

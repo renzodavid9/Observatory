@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:wsdlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:wsdl><![CDATA[<?binding.jca getAllDrugstores_Service_db.jca?>
+<wsdl:definitions name="getAllDrugstores_Service" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/getAllDrugstores_Service" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/getAllDrugstores_Service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/getAllDrugstores_Service">
+    <plt:partnerLinkType name="getAllDrugstores_Service_plt">
+        <plt:role name="getAllDrugstores_Service_role">
+            <plt:portType name="tns:getAllDrugstores_Service_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getAllDrugstores_Service" schemaLocation="xsd/getAllDrugstores_Service_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getAllDrugstores_ServiceSelect_inputParameters">
+        <wsdl:part name="getAllDrugstores_ServiceSelect_inputParameters" element="top:getAllDrugstores_ServiceSelectInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="DrugstoreCollection_msg">
+        <wsdl:part name="DrugstoreCollection" element="top:DrugstoreCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getAllDrugstores_Service_ptt">
+        <wsdl:operation name="getAllDrugstores_ServiceSelect">
+            <wsdl:input message="tns:getAllDrugstores_ServiceSelect_inputParameters"/>
+            <wsdl:output message="tns:DrugstoreCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>]]></con:wsdl>
+    <con:dependencies>
+        <con:schemaRef isInclude="false" schemaLocation="xsd/getAllDrugstores_Service_table.xsd" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getAllDrugstores_Service" ref="OSB_DB_ADAPTERS/getAllDrugstores_Service_table"/>
+    </con:dependencies>
+    <con:targetNamespace>http://xmlns.oracle.com/pcbpel/adapter/db/BPMServiceTest/Project1/getAllDrugstores_Service</con:targetNamespace>
+</con:wsdlEntry>

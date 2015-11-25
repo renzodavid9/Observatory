@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="Drugstore4" adapter="Database Adapter" wsdlLocation="Drugstore4.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForMSSQL" UIConnectionName="conMSSQL" adapterRef=""/>
+  <endpoint-interaction portType="Drugstore4_ptt" operation="merge">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="Drugstore4.Medicine"/>
+      <property name="DmlType" value="merge"/>
+      <property name="MappingsMetaDataURL" value="Drugstore4-or-mappings.xml"/>
+      <property name="OptimizeMerge" value="true"/>
+      <property name="DetectOmissions" value="true"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+  <endpoint-interaction portType="Drugstore4_ptt" operation="insert">
+    <interaction-spec className="oracle.tip.adapter.db.DBWriteInteractionSpec">
+      <property name="DescriptorName" value="Drugstore4.Medicine"/>
+      <property name="DmlType" value="insert"/>
+      <property name="MappingsMetaDataURL" value="Drugstore4-or-mappings.xml"/>
+      <property name="OptimizeMerge" value="true"/>
+      <property name="DetectOmissions" value="true"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+  <endpoint-interaction portType="Drugstore4_ptt" operation="Drugstore4Select">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="Drugstore4.Medicine"/>
+      <property name="QueryName" value="Drugstore4Select"/>
+      <property name="MappingsMetaDataURL" value="Drugstore4-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="Drugstore4.wsdl" ref="OSB_DB_ADAPTERS/Drugstore4_ADAPTER/Drugstore4"/>
+        <con:toplinkRef toplinkFile="Drugstore4-or-mappings.xml" ref="OSB_DB_ADAPTERS/Drugstore4_ADAPTER/Drugstore4-or-mappings"/>
+    </con:jcaDependency>
+</con:jcaEntry>

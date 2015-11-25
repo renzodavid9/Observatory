@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="getOwnerSession" adapter="Database Adapter" wsdlLocation="getOwnerSession.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="con1" adapterRef=""/>
+  <endpoint-interaction portType="getOwnerSession_ptt" operation="getOwnerSessionSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="getOwnerSession.Owner"/>
+      <property name="QueryName" value="getOwnerSessionSelect"/>
+      <property name="MappingsMetaDataURL" value="getOwnerSession-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="getOwnerSession.wsdl" ref="test4/getOwnerSessions/getOwnerSession"/>
+        <con:toplinkRef toplinkFile="getOwnerSession-or-mappings.xml" ref="test4/getOwnerSessions/getOwnerSession-or-mappings"/>
+    </con:jcaDependency>
+</con:jcaEntry>

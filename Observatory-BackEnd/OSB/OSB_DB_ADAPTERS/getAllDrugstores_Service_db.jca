@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:jcaEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:jca><![CDATA[<adapter-config name="getAllDrugstores_Service" adapter="Database Adapter" wsdlLocation="getAllDrugstores_Service.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="myConnPoolForDB" UIConnectionName="ObservatoryDB" adapterRef=""/>
+  <endpoint-interaction portType="getAllDrugstores_Service_ptt" operation="getAllDrugstores_ServiceSelect">
+    <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
+      <property name="DescriptorName" value="getAllDrugstores_Service.Drugstore"/>
+      <property name="QueryName" value="getAllDrugstores_ServiceSelect"/>
+      <property name="MappingsMetaDataURL" value="getAllDrugstores_Service-or-mappings.xml"/>
+      <property name="ReturnSingleResultSet" value="false"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>]]></con:jca>
+    <con:jcaDependency>
+        <con:wsdlRef wsdlLocation="getAllDrugstores_Service.wsdl" ref="OSB_DB_ADAPTERS/getAllDrugstores_Service"/>
+        <con:toplinkRef toplinkFile="getAllDrugstores_Service-or-mappings.xml" ref="OSB_DB_ADAPTERS/getAllDrugstores_Service-or-mappings"/>
+    </con:jcaDependency>
+</con:jcaEntry>

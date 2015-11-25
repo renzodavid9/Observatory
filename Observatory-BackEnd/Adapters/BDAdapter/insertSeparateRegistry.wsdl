@@ -1,0 +1,21 @@
+<?binding.jca insertSeparateRegistry_db.jca?>
+<wsdl:definitions name="insertSeparateRegistry" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/insertSeparateRegistry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/insertSeparateRegistry">
+    <plt:partnerLinkType name="insertSeparateRegistry_plt">
+        <plt:role name="insertSeparateRegistry_role">
+            <plt:portType name="tns:insertSeparateRegistry_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/insertSeparateRegistry" schemaLocation="xsd/insertSeparateRegistry_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="MedicineSeparateStatusCollection_msg">
+        <wsdl:part name="MedicineSeparateStatusCollection" element="top:MedicineSeparateStatusCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="insertSeparateRegistry_ptt">
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:MedicineSeparateStatusCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

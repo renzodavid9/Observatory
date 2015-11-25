@@ -1,0 +1,25 @@
+<?binding.jca Drugstore11_db.jca?>
+<wsdl:definitions name="Drugstore11" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore11" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/Adapters/BDAdapter/Drugstore11" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore11">
+    <plt:partnerLinkType name="Drugstore11_plt">
+        <plt:role name="Drugstore11_role">
+            <plt:portType name="tns:Drugstore11_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/Drugstore11" schemaLocation="xsd/Drugstore11_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="Drugstore11Select_inputParameters">
+        <wsdl:part name="Drugstore11Select_inputParameters" element="top:Drugstore11Select_mnameInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="ProductCollection_msg">
+        <wsdl:part name="ProductCollection" element="top:ProductCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="Drugstore11_ptt">
+        <wsdl:operation name="Drugstore11Select">
+            <wsdl:input message="tns:Drugstore11Select_inputParameters"/>
+            <wsdl:output message="tns:ProductCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:xmlEntry xmlns:con="http://www.bea.com/wli/sb/resources/config">
+    <con:xml-content><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="MEDICINE_SEPARATE_STATUS.KEY:db_column_type">VARCHAR2</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_column_4">USER_ID</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.ID:db_column_precision">0</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.KEY:db_column_not_null">true</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_table_type">TABLE</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_column_3">DRUGSTORE_ID</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_column_2">RESPONSE</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_column_1">KEY</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS:db_column_0">ID</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.DRUGSTORE_ID:db_column_not_null">true</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.KEY:db_column_size">100</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.ID:db_column_type">NUMBER</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.RESPONSE:db_column_not_null">true</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.ID:db_column_not_null">true</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.RESPONSE:db_column_type">NUMBER</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.DRUGSTORE_ID:db_column_type">NUMBER</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.DRUGSTORE_ID:db_column_precision">0</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.RESPONSE:db_column_precision">0</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.USER_ID:db_column_not_null">true</entry>
+   <entry key="root_descriptor_alias">MEDICINE_SEPARATE_STATUS</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.USER_ID:db_column_type">NUMBER</entry>
+   <entry key="MEDICINE_SEPARATE_STATUS.USER_ID:db_column_precision">0</entry>
+</properties>]]></con:xml-content>
+</con:xmlEntry>
